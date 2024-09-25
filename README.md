@@ -1,2 +1,1 @@
-# dsft2409_mikeltelo
-Aquí van todos los ejercicios resueltos
+# 2409_dsft_thebridge_alumnos
