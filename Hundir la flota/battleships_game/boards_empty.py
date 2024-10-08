@@ -1,8 +1,8 @@
 # Empty boards
-board_10x10_computer = []
-outgoing_board_10x10_computer = []
-board_10x10_user = []
-outgoing_board_10x10_user = []
+board_computer = []
+#launch_board_computer = []
+board_user = []
+launch_board_user = []
 
 #Create a board with dimensions 'rows' x 'columns' and fill it with the value '_'
 def create_board(rows, columns, fill='_'):
@@ -17,14 +17,14 @@ def create_board(rows, columns, fill='_'):
 
 import pprint
 
-board_10x10_computer = create_board(board_size,board_size)
-pprint.pprint(board_10x10_computer)
-print()
-outgoing_board_10x10_computer = create_board(board_size,board_size)
-pprint.pprint(outgoing_board_10x10_computer)
-print()
-board_10x10_user = create_board(board_size,board_size)
-pprint.pprint(board_10x10_user)
-print()
-outgoing_board_10x10_user = create_board(board_size,board_size)
-pprint.pprint(outgoing_board_10x10_user)
+board_computer = create_board(board_size,board_size)
+#pprint.pprint(board_computer)
+#print()
+#launch_board_computer = create_board(board_size,board_size)
+#pprint.pprint(launch_board_computer)
+#print()
+board_user = create_board(board_size,board_size)
+#pprint.pprint(board_user)
+#print()
+launch_board_user = create_board(board_size,board_size)
+#pprint.pprint(launch_board_user)
