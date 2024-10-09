@@ -52,22 +52,28 @@ def place_ships_randomly(board, size_of_ships, number_of_ships):
 # Function to handle the computer's shot
 def shot_computer(board_user, row, column):
     if board_user[row][column] == 'S':
+        print('Computer hit at', row, column)
         board_user[row][column] = 'X'  # Mark hit as 'X'
         return True
     elif board_user[row][column] in ('X', '0'):
+        print('That position is already given, try again.')
         return True
     else:
+        print('Computer missed at', row, column)
         board_user[row][column] = '0'  # Mark miss as '0'
         return False
 
 # Function to handle the user's shot
 def shot_user(board_computer, launch_board_user, row, column):
     if board_computer[row][column] == 'S':
+        print('User hit at', row, column)
         launch_board_user[row][column] = 'X'  # Mark hit as 'X'
         return True
     elif launch_board_user[row][column] in ('X', '0'):
+        print('That position is already given, try again.')
         return True
     else:
+        print('User missed at', row, column)
         launch_board_user[row][column] = '0'  # Mark miss as '0'
         return False
 
