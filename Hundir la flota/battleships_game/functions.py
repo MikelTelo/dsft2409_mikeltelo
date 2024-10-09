@@ -7,6 +7,7 @@
 # functions.py
 
 import random
+import pprint
 
 from variables import board_size, size_of_ships, number_of_ships
 
@@ -54,6 +55,8 @@ def shot_computer(board_user, row, column):
     if board_user[row][column] == 'S':
         print('Computer hit at', row, column)
         board_user[row][column] = 'X'  # Mark hit as 'X'
+        print('PLAYER BOARD')
+        pprint.pprint(board_user)
         return True
     elif board_user[row][column] in ('X', '0'):
         print('That position is already given, try again.')
@@ -61,6 +64,8 @@ def shot_computer(board_user, row, column):
     else:
         print('Computer missed at', row, column)
         board_user[row][column] = '0'  # Mark miss as '0'
+        print('PLAYER BOARD')
+        pprint.pprint(board_user)
         return False
 
 # Function to handle the user's shot
@@ -68,6 +73,8 @@ def shot_user(board_computer, launch_board_user, row, column):
     if board_computer[row][column] == 'S':
         print('User hit at', row, column)
         launch_board_user[row][column] = 'X'  # Mark hit as 'X'
+        print('COMPUTER BOARD')
+        pprint.pprint(launch_board_user)  # Print the updated computer board
         return True
     elif launch_board_user[row][column] in ('X', '0'):
         print('That position is already given, try again.')
@@ -75,17 +82,30 @@ def shot_user(board_computer, launch_board_user, row, column):
     else:
         print('User missed at', row, column)
         launch_board_user[row][column] = '0'  # Mark miss as '0'
+        print('COMPUTER BOARD')
+        pprint.pprint(launch_board_user)  # Print the updated computer board
         return False
 
 # Function to count the number of 'X' (hits) on the board
 def count_x(board):
     return sum(row.count('X') for row in board)
 
+# Initialize an empty set to store the chosen coordinates
+chosen_coordinates = set()
+
 # Computer turn function with random shot
 def computer_turn(board_user):
     while True:
         row = random.randint(0, 9)
         column = random.randint(0, 9)
+        
+         # Check if the coordinate has already been chosen
+        if (row, column) in chosen_coordinates:
+            continue  # If the coordinate was already used, try again
+        
+        # Add the chosen coordinate to the set
+        chosen_coordinates.add((row, column))
+
         result = shot_computer(board_user, row, column)
         if count_x(board_user) == 20:
             return True
@@ -98,19 +118,25 @@ def player_turn(board_computer, launch_board_user):
     player_wins = False
     while True:
         try:
+            row = random.randint(0, 9)
+            '''
             row = input('Introduce a row in range 0-9 (or type "exit" to quit): ')
             if row.lower() == 'exit':
                 print('Exiting the game. Goodbye!')
                 return 'exit'  # Return 'exit' if user types "exit"
+            '''
             row = int(row)
             while row < 0 or row > 9:
                 print("Row out of range. Please enter an integer between 0 and 9:")
                 row = int(input('Introduce a row in range 0-9: '))
-            
+
+            column = random.randint(0, 9)
+            '''
             column = input('Introduce a column in range 0-9 (or type "exit" to quit): ')
             if column.lower() == 'exit':
                 print('Exiting the game. Goodbye!')
                 return 'exit'  # Return 'exit' if user types "exit"
+            '''
             column = int(column)
             while column < 0 or column > 9:
                 print("Column out of range. Please enter an integer between 0 and 9:")

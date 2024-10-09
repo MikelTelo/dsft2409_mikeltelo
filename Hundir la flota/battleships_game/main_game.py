@@ -60,17 +60,20 @@ def start_game():
         if player_wins:
             print('User wins, congratulations!!!')
             break    
+        '''
         print('COMPUTER BOARD')
         pprint.pprint(launch_board_user)
         print()
-
+        '''
         computer_wins = computer_turn(board_user)
         if computer_wins:
             print('Computer wins, try again!!!')
             break    
+        '''
         print('PLAYER BOARD')
         pprint.pprint(board_user)
         print()
+        '''
 
 # Run the menu to start the game
 menu()
