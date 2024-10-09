@@ -97,30 +97,34 @@ def computer_turn(board_user):
 def player_turn(board_computer, launch_board_user):
     player_wins = False
     while True:
-        row = input('Introduce a row in range 0-9 (or type "exit" to quit): ')
-        if row.lower() == 'exit':
-            print('Exiting the game. Goodbye!')
-            return 'exit'  # Return 'exit' if user types "exit"
-        row = int(row)
-        while row < 0 or row > 9:
-            print("Row out of range. Please enter an integer between 0 and 9:")
-            row = int(input('Introduce a row in range 0-9: '))
-        
-        column = input('Introduce a column in range 0-9 (or type "exit" to quit): ')
-        if column.lower() == 'exit':
-            print('Exiting the game. Goodbye!')
-            return 'exit'  # Return 'exit' if user types "exit"
-        column = int(column)
-        while column < 0 or column > 9:
-            print("Column out of range. Please enter an integer between 0 and 9:")
-            column = int(input('Introduce a column in range 0-9: '))
-        
-        print(f'User shoots at {row}, {column}')
-        result = shot_user(board_computer, launch_board_user, row, column)
-        if count_x(launch_board_user) == 20:
-            player_wins = True
-            break
-        if not result:
-            print('Turn of player finished.')
-            break
+        try:
+            row = input('Introduce a row in range 0-9 (or type "exit" to quit): ')
+            if row.lower() == 'exit':
+                print('Exiting the game. Goodbye!')
+                return 'exit'  # Return 'exit' if user types "exit"
+            row = int(row)
+            while row < 0 or row > 9:
+                print("Row out of range. Please enter an integer between 0 and 9:")
+                row = int(input('Introduce a row in range 0-9: '))
+            
+            column = input('Introduce a column in range 0-9 (or type "exit" to quit): ')
+            if column.lower() == 'exit':
+                print('Exiting the game. Goodbye!')
+                return 'exit'  # Return 'exit' if user types "exit"
+            column = int(column)
+            while column < 0 or column > 9:
+                print("Column out of range. Please enter an integer between 0 and 9:")
+                column = int(input('Introduce a column in range 0-9: '))
+            
+            print(f'User shoots at {row}, {column}')
+            result = shot_user(board_computer, launch_board_user, row, column)
+            if count_x(launch_board_user) == 20:
+                player_wins = True
+                break
+            if not result:
+                print('Turn of player finished.')
+                break
+        except ValueError:
+            print("Error: Invalid input. Please enter an integrer between 0-9.")
+    
     return player_wins
