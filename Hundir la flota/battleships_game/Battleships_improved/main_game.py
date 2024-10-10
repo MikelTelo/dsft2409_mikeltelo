@@ -7,7 +7,6 @@
 # main_game.py
 
 import pprint
-import os
 from variables import board_size, size_of_ships, number_of_ships
 from functions import create_board, place_ships_randomly, player_turn, computer_turn
 
@@ -56,7 +55,6 @@ def start_game():
 
     while True:
         player_wins = player_turn(board_computer, launch_board_user)
-        #os.system("cls")
         if player_wins == 'exit':
             break
         if player_wins:
@@ -68,7 +66,6 @@ def start_game():
         print()
         '''
         computer_wins = computer_turn(board_user)
-        os.system("cls")
         if computer_wins:
             print('Computer wins, try again!!!')
             break    
