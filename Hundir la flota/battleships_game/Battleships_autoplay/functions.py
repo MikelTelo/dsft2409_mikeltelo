@@ -13,14 +13,7 @@ from variables import board_size, size_of_ships, number_of_ships
 
 # Function to create an empty board with 'rows' x 'columns' filled with '_'
 def create_board(rows, columns, fill='_'):
-    board = [[fill for _ in range(columns)] for _ in range(rows)]
-
-    board[0] = ['#'] + [f'Col {i}' for i in range(1, columns)]
-
-    for row in range(1, rows):
-        board[row][0] = f'Row {row}'
-
-    return board
+    return [[fill for _ in range(columns)] for _ in range(rows)]
 
 # Function to check if a ship can be placed at a specific position
 def can_place_ship(board, ship_length, start_row, start_col, orientation):
