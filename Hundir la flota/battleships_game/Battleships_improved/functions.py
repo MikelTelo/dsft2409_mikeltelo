@@ -15,19 +15,25 @@ from variables import board_size, size_of_ships, number_of_ships
 def create_board(rows, columns, fill='_'):
     return [[fill for _ in range(columns)] for _ in range(rows)]
 
+    for col in range(1, min(columns, 11)):
+        board[0][col] = col
+
+    for row in range(1, min(rows, 11)):
+        board[row][0] = row
+
 # Function to check if a ship can be placed at a specific position
 def can_place_ship(board, ship_length, start_row, start_col, orientation):
     if orientation == 'H':
         if start_col + ship_length > board_size:
             return False
         for c in range(start_col, start_col + ship_length):
-            if board[start_row][c] == 'S':
+            if board[start_row-1][c] == 'S':
                 return False
     elif orientation == 'V':
         if start_row + ship_length > board_size:
             return False
         for r in range(start_row, start_row + ship_length):
-            if board[r][start_col] == 'S':
+            if board[r][start_col-1] == 'S':
                 return False
     return True
 
@@ -38,8 +44,8 @@ def place_ships_randomly(board, size_of_ships, number_of_ships):
         for _ in range(number_of_ships[ship_name]):
             placed = False
             while not placed:
-                start_row = random.randint(0, board_size - 1)
-                start_col = random.randint(0, board_size - 1)
+                start_row = random.randint(1, board_size - 1)
+                start_col = random.randint(1, board_size - 1)
                 orientation = random.choice(['H', 'V'])
                 if can_place_ship(board, ship_length, start_row, start_col, orientation):
                     if orientation == 'H':
@@ -96,8 +102,8 @@ chosen_coordinates = set()
 # Computer turn function with random shot
 def computer_turn(board_user):
     while True:
-        row = random.randint(0, 9)
-        column = random.randint(0, 9)
+        row = random.randint(1, 10)
+        column = random.randint(1, 10)
         
          # Check if the coordinate has already been chosen
         if (row, column) in chosen_coordinates:
@@ -120,25 +126,25 @@ def player_turn(board_computer, launch_board_user):
         try:
             #row = random.randint(0, 9)
             
-            row = input('Introduce a row in range 0-9 (or type "exit" to quit): ')
+            row = input('Introduce a row in range 1-10 (or type "exit" to quit): ')
             if row.lower() == 'exit':
                 print('Exiting the game. Goodbye!')
                 return 'exit'  # Return 'exit' if user types "exit"
             
             row = int(row)
-            while row < 0 or row > 9:
+            while row < 1 or row > 10:
                 print("Row out of range. Please enter an integer between 0 and 9:")
-                row = int(input('Introduce a row in range 0-9: '))
+                row = int(input('Introduce a row in range 1-10: '))
 
             #column = random.randint(0, 9)
             
-            column = input('Introduce a column in range 0-9 (or type "exit" to quit): ')
+            column = input('Introduce a column in range 1-10 (or type "exit" to quit): ')
             if column.lower() == 'exit':
                 print('Exiting the game. Goodbye!')
                 return 'exit'  # Return 'exit' if user types "exit"
             
             column = int(column)
-            while column < 0 or column > 9:
+            while column < 1 or column > 10:
                 print("Column out of range. Please enter an integer between 0 and 9:")
                 column = int(input('Introduce a column in range 0-9: '))
             
