@@ -56,7 +56,7 @@ def start_game():
 
     while True:
         player_wins = player_turn(board_computer, launch_board_user)
-        #os.system("cls")
+        os.system("cls")
         if player_wins == 'exit':
             break
         if player_wins:
