@@ -1,0 +1,4 @@
+AGUA = 0
+TOCADO = 1
+HUNDIDO = 2
+FALLADO = 3
