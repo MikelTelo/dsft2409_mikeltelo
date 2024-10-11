@@ -10,7 +10,7 @@ import time
 import random
 import pprint
 
-from variables import board_size, size_of_ships, number_of_ships
+from variables import board_size, size_of_ships, number_of_ships, delay
 
 # Function to create an empty board with 'rows' x 'columns' filled with '_'
 def create_board(rows, columns, fill='_'):
@@ -55,44 +55,44 @@ def place_ships_randomly(board, size_of_ships, number_of_ships):
 def shot_computer(board_user, row, column):
     if board_user[row][column] == 'S':
         print('Computer hit at', row, column)
-        time.sleep(0.5)
+        time.sleep(delay)
         board_user[row][column] = 'X'  # Mark hit as 'X'
         print('PLAYER BOARD')
         pprint.pprint(board_user)
-        time.sleep(0.5)
+        time.sleep(delay)
         return True
     elif board_user[row][column] in ('X', '0'):
         print('That position is already given, try again.')
         return True
     else:
         print('Computer missed at', row, column)
-        time.sleep(0.5)
+        time.sleep(delay)
         board_user[row][column] = '0'  # Mark miss as '0'
         print('PLAYER BOARD')
         pprint.pprint(board_user)
-        time.sleep(0.5)
+        time.sleep(delay)
         return False
 
 # Function to handle the user's shot
 def shot_user(board_computer, launch_board_user, row, column):
     if board_computer[row][column] == 'S':
         print('User hit at', row, column)
-        time.sleep(0.5)
+        time.sleep(delay)
         launch_board_user[row][column] = 'X'  # Mark hit as 'X'
         print('COMPUTER BOARD')
         pprint.pprint(launch_board_user)  # Print the updated computer board
-        time.sleep(0.5)
+        time.sleep(delay)
         return True
     elif launch_board_user[row][column] in ('X', '0'):
         print('That position is already given, try again.')
         return True
     else:
         print('User missed at', row, column)
-        time.sleep(0.5)
+        time.sleep(delay)
         launch_board_user[row][column] = '0'  # Mark miss as '0'
         print('COMPUTER BOARD')
         pprint.pprint(launch_board_user)  # Print the updated computer board
-        time.sleep(0.5)
+        time.sleep(delay)
         return False
 
 # Function to count the number of 'X' (hits) on the board
