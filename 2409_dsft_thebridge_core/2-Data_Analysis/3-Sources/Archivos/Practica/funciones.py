@@ -1,15 +1,15 @@
-from variables import * 
+from variables import RUTA_DESCARGAS, EXTENSIONES_IMAGENES, EXTENSIONES_DOCUMENTOS, EXTENSIONES_SOFTWARE, EXTENSIONES_OTROS
 
 import os
 import shutil
 
 def ordenar_archivos(ruta_origen):
-    # Definir las extensiones para cada categoría
+    # Definir las extensiones para cada categoría usando las variables importadas
     extensiones = {
-        'Imagenes': ['.jpg', '.jpeg', '.png', '.svg', '.gif'],
-        'Documentos': ['.doc', '.docx', '.txt', '.pdf', '.xls', '.ppt', '.xlsx', '.pptx'],
-        'Software': ['.exe', '.py','.ipynb'],
-        'Otros': ['.md']
+        'Imagenes': EXTENSIONES_IMAGENES,
+        'Documentos': EXTENSIONES_DOCUMENTOS,
+        'Software': EXTENSIONES_SOFTWARE,
+        'Otros': EXTENSIONES_OTROS
     }
 
     # Crear las carpetas si no existen
@@ -37,3 +37,6 @@ def ordenar_archivos(ruta_origen):
             ruta_destino = os.path.join(ruta_origen, categoria_destino, archivo)
             shutil.move(ruta_archivo, ruta_destino)
             print(f"Movido: {archivo} -> {categoria_destino}")
+
+if __name__ == "__main__":
+    ordenar_archivos(RUTA_DESCARGAS)
