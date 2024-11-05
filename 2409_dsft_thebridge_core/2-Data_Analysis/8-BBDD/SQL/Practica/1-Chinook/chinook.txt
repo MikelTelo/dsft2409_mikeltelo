@@ -1,0 +1,11 @@
+SELECT *
+FROM customers
+WHERE Country = 'Brazil';
+
+SELECT *
+FROM employees
+WHERE title = 'Sales Support Agent';
+
+SELECT *
+FROM tracks
+WHERE Composer = 'AC/DC';
