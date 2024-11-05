@@ -9,3 +9,10 @@ WHERE title = 'Sales Support Agent';
 SELECT *
 FROM tracks
 WHERE Composer = 'AC/DC';
+
+SELECT FirstName, LastName, CustomerId, Country
+FROM customers
+WHERE Country != 'USA';
+
+
+
