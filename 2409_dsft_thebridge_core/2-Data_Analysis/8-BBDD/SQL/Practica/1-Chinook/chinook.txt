@@ -14,5 +14,33 @@ SELECT FirstName, LastName, CustomerId, Country
 FROM customers
 WHERE Country != 'USA';
 
+SELECT DISTINCT BillingCountry
+FROM invoices;
+
+SELECT State, COUNT(*) AS client_count
+FROM customers
+WHERE Country = 'USA'
+GROUP BY State;
+
+SELECT COUNT(*) AS total_articulos
+FROM invoice_items
+WHERE InvoiceId = 37;
+
+SELECT COUNT(TrackId) AS total_canciones
+FROM tracks
+WHERE Composer = 'AC/DC';
+
+SELECT InvoiceId, COUNT(Quantity) AS total_articulos
+FROM invoice_items
+GROUP BY InvoiceId;
+
+SELECT BillingCountry, COUNT(*) AS total_facturas
+FROM invoices
+GROUP BY BillingCountry;
 
 
+
+
+SELECT COUNT(*) AS total_facturas
+FROM invoices
+WHERE YEAR(InvoiceDate) IN (2009, 2011)
