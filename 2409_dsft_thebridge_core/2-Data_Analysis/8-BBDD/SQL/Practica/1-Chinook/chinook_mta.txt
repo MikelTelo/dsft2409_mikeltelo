@@ -62,10 +62,101 @@ WHERE Name LIKE 'You%';
 
 SEGUNDA PARTE
 1
-SELECT a.FirstName, LastName AS agente_nombre,
-       f.InvoiceId,
-       f.InvoiceDate
-FROM employees a
-JOIN customers c ON a.EmployeeId = c.SupportRepId
-JOIN invoices f ON c.CustomerId = f.CustomerId
+SELECT InvoiceId, InvoiceDate, BillingCountry, FirstName || ' ' || LastName as Nombre_del_cliente FROM invoices i LEFT JOIN customers c ON i.CustomerId = c.CustomerId 
+WHERE i.BillingCountry = "Brazil"
 2
+SELECT 
+    e.FirstName || ' ' || e.LastName as Nombre_Completo,
+    i.InvoiceId,
+    i.InvoiceDate
+FROM 
+    employees e
+INNER JOIN 
+    customers c ON e.EmployeeId = c.CustomerId
+INNER JOIN 
+    invoices i ON c.CustomerId = i.InvoiceId
+WHERE 
+    e.Title LIKE 'Sales Support Agent%'
+3
+SELECT 
+    c.FirstName,
+    c.Country,
+    e.FirstName,
+    i.Total
+FROM 
+    employees e
+INNER JOIN 
+    customers c ON e.EmployeeId = c.CustomerId
+INNER JOIN 
+    invoices i ON c.CustomerId = i.InvoiceId
+WHERE 
+    e.Title LIKE 'Sales Support Agent%'
+4
+SELECT 
+    i.InvoiceLineId,
+    i.UnitPrice,
+    i.Quantity,
+    i.InvoiceId,
+    t.Name
+FROM 
+    tracks t
+INNER JOIN 
+    invoice_items i ON t.TrackId = i.InvoiceLineId
+5
+SELECT 
+    t.Name,
+    m.Name as formato,
+    a.Title as album,
+    g.Name as genero
+FROM 
+    tracks t
+JOIN 
+    albums a ON t.AlbumId = a.AlbumId
+JOIN
+    media_types m ON t.MediaTypeId = m.MediaTypeId
+JOIN
+    genres g ON t.GenreId = g.GenreId
+6
+SELECT count(*) as canciones, p.Name FROM tracks as t JOIN playlist_track as pt ON t.TrackId = pt.TrackId JOIN playlists as p ON pt.PlaylistId = p.PlaylistId group by p.Name
+7
+SELECT 
+    e.FirstName ||' ' ||  e.LastName as Empleado,
+    COUNT(DISTINCT i.InvoiceId) as Numero_Facturas,
+    COUNT(DISTINCT c.CustomerId) as Numero_Clientes,
+    ROUND(SUM(i.Total), 2) as Total_Ventas
+FROM employees e
+JOIN customers c ON e.EmployeeId = c.SupportRepId
+JOIN invoices i ON c.CustomerId = i.CustomerId
+WHERE e.Title = 'Sales Support Agent'
+GROUP BY e.EmployeeId
+ORDER BY Total_Ventas DESC;
+8
+ SELECT 
+    e.FirstName ||' ' ||  e.LastName as Empleado,
+    COUNT(DISTINCT i.InvoiceId) as Numero_Facturas,
+    COUNT(DISTINCT c.CustomerId) as Numero_Clientes,
+    ROUND(SUM(i.Total), 2) as Total_Ventas
+FROM employees e
+JOIN customers c ON e.EmployeeId = c.SupportRepId
+JOIN invoices i ON c.CustomerId = i.CustomerId
+WHERE e.Title = 'Sales Support Agent' 
+    AND strftime('%Y', i.InvoiceDate) = '2009'
+GROUP BY e.EmployeeId
+ORDER BY Total_Ventas DESC
+LIMIT 1 
+9
+SELECT 
+        ar.Name,
+        COUNT(il.TrackId) as canciones_vendidas,
+        COUNT(DISTINCT i.InvoiceId) as num_facturas,
+        ROUND(SUM(il.UnitPrice * il.Quantity), 2) as total_ventas,
+        GROUP_CONCAT(DISTINCT al.Title) as albumes
+    FROM artists ar
+    JOIN albums al ON ar.ArtistId = al.ArtistId
+    JOIN tracks t ON al.AlbumId = t.AlbumId
+    JOIN invoice_items il ON t.TrackId = il.TrackId
+    JOIN invoices i ON il.InvoiceId = i.InvoiceId
+    GROUP BY ar.ArtistId
+    ORDER BY total_ventas DESC
+    LIMIT 3
+
