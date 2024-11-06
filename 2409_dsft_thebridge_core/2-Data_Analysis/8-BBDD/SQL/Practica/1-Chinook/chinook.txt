@@ -1,46 +1,71 @@
+1
 SELECT *
 FROM customers
-WHERE Country = 'Brazil';
-
+WHERE country = 'Brazil';
+2
 SELECT *
 FROM employees
 WHERE title = 'Sales Support Agent';
-
+3
 SELECT *
 FROM tracks
 WHERE Composer = 'AC/DC';
-
+4
 SELECT FirstName, LastName, CustomerId, Country
 FROM customers
 WHERE Country != 'USA';
-
+5
+SELECT FirstName, LastName, City, State, Country, Email, Title
+FROM employees
+WHERE Title = 'Sales Support Agent';
+6
 SELECT DISTINCT BillingCountry
 FROM invoices;
-
+7
 SELECT State, COUNT(*) AS client_count
 FROM customers
 WHERE Country = 'USA'
 GROUP BY State;
-
+8
 SELECT COUNT(*) AS total_articulos
 FROM invoice_items
 WHERE InvoiceId = 37;
-
+9
 SELECT COUNT(TrackId) AS total_canciones
 FROM tracks
 WHERE Composer = 'AC/DC';
-
+10
 SELECT InvoiceId, COUNT(Quantity) AS total_articulos
 FROM invoice_items
 GROUP BY InvoiceId;
-
+11
 SELECT BillingCountry, COUNT(*) AS total_facturas
 FROM invoices
 GROUP BY BillingCountry;
-
-
-
-
+12
 SELECT COUNT(*) AS total_facturas
 FROM invoices
-WHERE YEAR(InvoiceDate) IN (2009, 2011)
+WHERE strftime('%Y', InvoiceDate) IN ('2009', '2011');
+13
+SELECT COUNT(*) AS total_facturas
+FROM invoices
+WHERE strftime('%Y', InvoiceDate) BETWEEN '2009' AND '2011';
+14
+SELECT Country, COUNT(*) AS total_clientes
+FROM customers
+WHERE Country IN ('Spain', 'Brazil')
+GROUP BY Country;
+15
+SELECT *
+FROM tracks
+WHERE Name LIKE 'You%';
+
+SEGUNDA PARTE
+1
+SELECT a.FirstName, LastName AS agente_nombre,
+       f.InvoiceId,
+       f.InvoiceDate
+FROM employees a
+JOIN customers c ON a.EmployeeId = c.SupportRepId
+JOIN invoices f ON c.CustomerId = f.CustomerId
+2
