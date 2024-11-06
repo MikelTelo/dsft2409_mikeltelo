@@ -1,0 +1,1 @@
+SELECT * FROM albums as a WHERE a.Title="Balls to the Wall";
