@@ -1,0 +1,96 @@
+SELECT *
+FROM crime_scene_report
+WHERE date = '20180115' AND type = 'murder' AND city = 'SQL City'
+
+
+20180115	murder	Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".	SQL City
+
+
+Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".
+
+SELECT *
+FROM person
+WHERE name LIKE 'Annabel%';
+
+id	name		license id	address number	adress street	ssn
+16371	Annabel Miller	490173		103		Franklin Ave	318771143
+
+SELECT *
+FROM interview
+WHERE person_id = '16371';
+
+16371	I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
+
+SELECT *
+FROM person
+WHERE address_street_name LIKE 'Northwestern Dr%'
+  AND address_number = (SELECT MAX(address_number)
+                        FROM person
+                        WHERE address_street_name LIKE 'Northwestern Dr%');
+
+id	name		license id	adress number	adress name	ssn
+14887	Morty Schapiro	118009		4919		Northwestern Dr	111564949
+
+SELECT *
+FROM interview
+WHERE person_id = '14887';
+
+14887	I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
+
+
+SELECT *
+FROM drivers_license
+WHERE plate_number LIKE '%H42W%'
+
+id	age	height	eye color	hair color	gender	plate number	car make	car mode
+183779	21	65	blue		blonde		female	H42W0X		Toyota	Prius
+423327	30	70	brown		brown		male	0H42W2		Chevrolet	Spark LS
+664760	21	71	black		black		male	4H42WR		Nissan	Altima
+
+SELECT *
+FROM get_fit_now_check_in
+WHERE membership_id LIKE '%48Z%';
+
+48Z38	20170611	813	1122
+48Z38	20171212	1150	1153
+48Z38	20170820	919	921
+48Z38	20180314	315	1150
+48Z38	20170120	482	1138
+48Z7A	20180109	1600	1730
+48Z55	20180109	1530	1700
+
+67318	4719	The Funky Grooves Tour	20180115 (Jeremy bowers)
+67318	1143	SQL Symphony Concert	20171206
+
+Joe Germuska
+
+SELECT *
+FROM facebook_event_checkin
+WHERE person_id ='67318';
+
+SELECT *
+FROM drivers_license
+WHERE hair_color = 'red' AND car_make = 'Tesla'
+
+202298	68	66	green	red	female	500123	Tesla	Model S
+291182	65	66	blue	red	female	08CM64	Tesla	Model S
+736081	79	69	brown	red	male	GCAQ6Y	Tesla	Model S
+918773	48	65	black	red	female	917UU3	Tesla	Model S
+
+SELECT *
+FROM facebook_event_checkin
+WHERE event_name ='SQL Symphony Concert' AND date LIKE '201712%';
+
+99716
+
+SELECT *
+FROM person
+WHERE id = '99716';
+
+99716	Miranda Priestly	202298	1883	Golden Ave	987756388
+
+
+
+
+
+
