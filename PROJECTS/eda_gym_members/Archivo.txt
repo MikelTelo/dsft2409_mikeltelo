@@ -1,1 +1,1 @@
-https://github.com/MikelTelo/EDA-on-Body-Composition-and-Workout-Routines-for-Gym-Members.git
+https://github.com/MikelTelo/eda_for_gym_owners_members.git
