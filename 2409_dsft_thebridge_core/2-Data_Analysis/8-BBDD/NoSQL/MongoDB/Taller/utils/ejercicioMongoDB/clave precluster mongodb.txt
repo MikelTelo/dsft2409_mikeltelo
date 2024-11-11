@@ -1,0 +1,11 @@
+TIDzFeTjAbuoAau0
+
+Passwordprecluster  mongodb
+
+mongodb+srv://mikeltelo:TIDzFeTjAbuoAau0@cluster1.smjrl.mongodb.net/
+
+mongodb+srv://mikeltelo:TIDzFeTjAbuoAau0@cluster1.smjrl.mongodb.net/
+
+sample_mflix
+
+mongodb+srv://mikeltelo:TIDzFeTjAbuoAau0@cluster1.smjrl.mongodb.net/
