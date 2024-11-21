@@ -1,0 +1,28 @@
+Modelo = clase	+	hiperp	+	fit	+	seed
+
+
+1=
+
+gridsearch (h.Optimo) = Hiperparametro Optimo
+fit(x_train, y_train) = Modelo único inalterable
+eval(X_test, y_test)
+
+o
+
+2=
+
+coss-val(x) = esta es otra manera pero no le gusta a Hegoi (desventaja se hacen 10 fits diferentes, ventaja estimación mejor del modelo)
+
+clase	+	hiperp 		(fit+seed) 	quedan libres
+
+
+quedarnos con las features importance 
+
+comparar train con test para overfitting
+
+
+
+
+
+
+
