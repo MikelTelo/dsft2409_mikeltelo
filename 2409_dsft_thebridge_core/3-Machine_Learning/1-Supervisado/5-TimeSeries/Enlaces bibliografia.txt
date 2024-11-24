@@ -1,0 +1,26 @@
+Hands on Time Series
+https://learning.oreilly.com/library/view/hands-on-time-series/9781484259924/
+
+Time Series con otros modelos
+https://learning.oreilly.com/videos/time-series-analysis/9781838640590/?autoplay=false
+
+Aquí cuenta bastante bien el tema de los parámetros ARIMA
+https://www.kaggle.com/jagangupta/time-series-basics-exploring-traditional-ts
+
+Tutorial de ARIMA en vídeo
+https://www.youtube.com/watch?v=D9y6dcy0xK8
+
+Mas ARIMA con Python
+https://machinelearningmastery.com/make-sample-forecasts-arima-python/
+
+LSTM
+https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
+
+Métodos de Smoothing
+https://www.analyticsvidhya.com/blog/2018/02/time-series-forecasting-methods/
+
+Un librete online baastante completo
+https://otexts.com/fpp2/
+
+En este artículo te cuenta bastante bien el tema de la multicolinealidad en una regresión
+https://medium.com/swlh/how-multicollinearity-is-a-problem-in-linear-regression-dbb76e25cd80
