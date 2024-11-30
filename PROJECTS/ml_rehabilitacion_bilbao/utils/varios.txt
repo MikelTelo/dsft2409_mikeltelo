@@ -1,0 +1,18 @@
+uso_principal	 superficie_vivienda	numero_viviendas	numero_viviendas_categoria	demanda_calefaccion	demanda_calefaccion_post_interverncion	calificacion_demanda_calefaccion	calificacion_demanda_calefaccion_post_intervencion	coste_intervencion_m2	coste_intervencion_viv
+
+para el uso principal usa solo residencial, para calificacion_demanda_calefaccion solo utiliza d,e,f y g
+
+el objetivo es priorizar intervenciones para alcanzar Edificios Residenciales
+¿Qué exige?
+A partir de 2030, las viviendas deben tener una calificación mínima de E para ser vendidas o alquiladas.
+A partir de 2033, la exigencia sube a D.
+Objetivo: Mejorar la eficiencia energética en el sector residencial, que representa un porcentaje significativo del consumo energético y emisiones.
+
+Administraciones Públicas	Identificar áreas prioritarias y distribuir recursos eficientemente.
+Constructoras	Captar proyectos viables y planificar recursos.
+Financieras	Diseñar productos financieros específicos (préstamos verdes, hipotecas).
+
+Administraciones Públicas, Constructoras, Financieras
+
+referencia_catastral	codigo_ine	nombre_municipio	codigo_provincia	zona_climatica	uso_principal	altura_maxima	altura_maxima_categoria	tipologia_edificio	ano_construccion	ano_construccion_categoria	superficie_vivienda	numero_viviendas	numero_viviendas_categoria	cluster	demanda_calefaccion	demanda_calefaccion_post_interverncion	calificacion_demanda_calefaccion	calificacion_demanda_calefaccion_post_intervencion	coste_intervencion_m2	coste_intervencion_viv
+
