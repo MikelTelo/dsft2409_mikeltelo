@@ -1,1 +1,0 @@
-MAE del modelo optimizado: 192.82076069816216
