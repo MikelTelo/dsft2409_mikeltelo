@@ -25,6 +25,7 @@ CampaignChannel_Referral
 CampaignChannel_SEO
 Metricas:
 TimeOnSite
+PreviousPurchases
 
 CampaignType_Consideration
 Canales:
