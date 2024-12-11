@@ -1,7 +1,0 @@
-Model,Best Parameters,Best CV Score,Recall (Train),Recall (Test),Precision (Test),F1-Score (Test),ROC-AUC (Test),PR AUC,Confusion Matrix
-RandomForest,"{'classifier__max_depth': 22, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 6, 'classifier__n_estimators': 250}",0.9905749293119698,1.0,0.9907275320970043,0.8909557408595253,0.9381965552178319,0.7784514186083372,0.9466498784704526,"[[  28  170]
- [  13 1389]]"
-GradientBoosting,"{'classifier__learning_rate': 0.1, 'classifier__max_depth': 2, 'classifier__n_estimators': 125, 'classifier__subsample': 1.0}",0.9890669180018851,0.9922714420358153,0.9914407988587732,0.9014267185473411,0.9442934782608695,0.7850653467629216,0.9455296190550491,"[[  46  152]
- [  12 1390]]"
-XGBoost,"{'classifier__learning_rate': 0.07, 'classifier__max_depth': 4, 'classifier__n_estimators': 75, 'classifier__subsample': 0.7}",0.9862393967954761,0.9913289349670122,0.9821683309557775,0.90473061760841,0.9418604651162791,0.7882570354039684,0.9476821026769273,"[[  53  145]
- [  25 1377]]"
