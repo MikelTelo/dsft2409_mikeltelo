@@ -1,0 +1,1 @@
+En el pdf Dockerinstall_guide al hacer click en el hipervínculo del título te lleva al taller de FullStack de docker, puedes seguir los pasos para aprender un poco más de como funciona de manera práctica!
