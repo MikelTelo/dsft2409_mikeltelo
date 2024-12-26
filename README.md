@@ -1,39 +1,111 @@
-# 💻 Predicción de Precios de Laptops
+# 📊 Bootcamp de Data Science - Mi Viaje de Aprendizaje
 
-## 📊 Descripción del Proyecto
+## 🚀 Descripción General del Proyecto
 
-Este proyecto se enfoca en desarrollar modelos de machine learning para predecir con precisión los precios de laptops basándose en sus características y especificaciones. En la era digital actual, donde los consumidores se enfrentan a una amplia gama de opciones, nuestro objetivo es crear una herramienta que ayude a estimar el valor de mercado de diferentes modelos de laptops.
+Este repositorio documenta mi experiencia completa en el Bootcamp de Data Science, recopilando todos los conocimientos, proyectos, ejercicios y aprendizajes obtenidos durante el programa intensivo.
 
-## 🎯 Objetivo Principal
+## 📘 Contenido del Repositorio
 
-Construir modelos predictivos eficientes que puedan generalizar y prever con precisión los precios de laptops desconocidas, identificando patrones sutiles que impacten significativamente en los precios.
+### 🧠 Módulos de Aprendizaje
 
-## 🛠️ Tecnologías Utilizadas
+#### 1. Fundamentos de Programación
+- **Python desde cero**
+  - Sintaxis básica y avanzada
+  - Programación orientada a objetos
+  - Estructuras de datos
+  - Manejo de errores y excepciones
 
-- Python
-- Scikit-learn
+#### 2. Análisis de Datos
+- **Herramientas principales**
+  - Pandas para manipulación de datos
+  - NumPy para cálculos numéricos
+  - Matplotlib y Seaborn para visualización
+
+#### 3. Estadística y Matemáticas
+- Estadística descriptiva e inferencial
+- Probabilidad
+- Distribuciones estadísticas
+- Pruebas de hipótesis
+- Intervalos de confianza
+
+#### 4. Machine Learning
+- **Algoritmos de Aprendizaje Supervisado**
+  - Regresión lineal y logística
+  - Árboles de decisión
+  - Random Forest
+  - Support Vector Machines
+  - K-Nearest Neighbors
+
+- **Algoritmos de Aprendizaje No Supervisado**
+  - Clustering (K-means)
+  - Reducción de dimensionalidad
+  - Análisis de componentes principales (PCA)
+
+#### 5. Deep Learning
+- Introducción a redes neuronales
+- Frameworks: TensorFlow y Keras
+- Redes neuronales convolucionales
+- Redes neuronales recurrentes
+
+#### 6. Big Data
+- Apache Spark
+- Procesamiento distribuido
+- Herramientas de big data
+- Conceptos de computación en la nube
+
+## 🛠 Habilidades Técnicas Desarrolladas
+
+### Lenguajes de Programación
+- Python (avanzado)
+- SQL
+- R (básico)
+
+### Bibliotecas y Frameworks
 - Pandas
 - NumPy
-- Matplotlib/Seaborn
+- Scikit-learn
+- TensorFlow
+- Keras
+- Apache Spark
+- Matplotlib
+- Seaborn
 
-## 📁 Estructura del Proyecto
+### Herramientas de Desarrollo
+- Jupyter Notebook
+- Google Colab
+- Visual Studio Code
+- Git y GitHub
+- Docker
 
-1. **Preprocesamiento de Datos:** Limpieza y preparación del conjunto de datos.
-2. **Análisis Exploratorio:** Visualización de patrones y relaciones en los datos.
-3. **Ingeniería de Características:** Creación de nuevas características relevantes.
-4. **Entrenamiento del Modelo:** Implementación de algoritmos de regresión.
-5. **Evaluación del Modelo:** Uso del Error Absoluto Medio (MAE) como métrica principal.
+## 📁 Estructura de Proyectos
 
-## 🚀 Cómo Ejecutar el Proyecto
+- **Proyectos individuales**
+- **Proyectos en equipo**
+- **Proyecto final de bootcamp**
 
-1. Clonar el repositorio
-2. Instalar las dependencias
-3. Ejecutar el notebook principal: `laptop_price_predictions.ipynb`
+## 🏆 Certificaciones y Logros
 
-## 📊 Evaluación
+- Certificación en Data Science
+- Proyectos en portafolio
+- Competencias demostrables
 
-El rendimiento de los modelos se evalúa utilizando el Error Absoluto Medio (MAE). Cuanto menor sea el MAE, mejor será el desempeño del modelo.
+## 💡 Aprendizajes Clave
 
-## 👥 Contribuciones
+1. Importancia del análisis de datos en la toma de decisiones
+2. Metodologías de limpieza y preparación de datos
+3. Técnicas de modelado predictivo
+4. Ética en el manejo de datos
+5. Comunicación efectiva de insights
 
-Las contribuciones son bienvenidas. Por favor, abre un issue o realiza un pull request para sugerir cambios o mejoras.
+## 🔍 Próximos Pasos
+
+- Profundizar en machine learning
+- Especialización en deep learning
+- Participación en proyectos de código abierto
+- Preparación para certificaciones profesionales
+
+## 📞 Contacto
+
+- LinkedIn: [https://www.linkedin.com/in/mikel-telo/]
+- Email: [mikel_telo@hotmail.com]
+- Portfolio: [https://github.com/MikelTelo]
