@@ -6,7 +6,7 @@ from sklearn.linear_model import Lasso
 import pickle
 import os
 
-#os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(__file__))
 
 data = pd.read_csv('data/Advertising.csv', index_col=0)
 
