@@ -1,0 +1,22 @@
+[project]
+name = "capibara"
+version = "0.1.0"
+authors = [
+  { name="TheBridge", email="info@thebridge.tech" }
+]
+description = "A comprehensive Python library for data science and machine learning"
+readme = "README.md"
+requires-python = ">=3.9.6,<3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/TheBridgeDS/capibara"
+Issues = "https://github.com/TheBridgeDS/capibara/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

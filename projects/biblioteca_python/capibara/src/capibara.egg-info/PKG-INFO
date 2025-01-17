@@ -1,0 +1,93 @@
+Metadata-Version: 2.2
+Name: capibara
+Version: 0.1.0
+Summary: A comprehensive Python library for data science and machine learning
+Author-email: Your Name <your.email@example.com>
+Project-URL: Homepage, https://github.com/yourusername/capibara
+Project-URL: Issues, https://github.com/yourusername/capibara/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: requires-python
+
+# Capibara
+
+<div style="text-align:center">
+    <img src="./img/capibara_logo.png" alt="Capibara Logo" width="250"/>
+</div>
+
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Capibara is a powerful Python library designed to streamline data science workflows. It provides a comprehensive suite of tools for data analysis, processing, visualization, and machine learning tasks.
+
+## Features
+
+- **Data Analysis**: Robust tools for exploratory data analysis and statistical computations
+- **Data Processing**: Efficient data cleaning and transformation utilities
+- **Data Visualization**: Beautiful and interactive visualization capabilities
+- **Machine Learning**: Simplified interfaces for common ML tasks
+
+## Installation
+
+Install Capibara using pip:
+
+```bash
+pip install capibara
+```
+
+## Quick Start
+
+```python
+import capibara as cp
+
+# Example usage
+df = cp.data_analysis.basic_data_analysis(your_dataframe)
+```
+
+## Modules
+
+### Data Analysis
+- `filter_rows()`: Filter DataFrame rows based on conditions
+- `remove_outliers()`: Remove outliers from datasets
+- `basic_data_analysis()`: Perform comprehensive data analysis
+- `outlier_meanSd()`: Detect outliers using mean and standard deviation
+- `data_report()`: Generate detailed data reports
+- `missing_values_summary()`: Analyze missing values
+
+### Data Processing
+- `create_dummies()`: Create dummy variables
+- `fill_zeros_with_mean()`: Replace zeros with mean values
+- `fill_nans_with_mean()`: Handle missing values
+- `convert_to_numeric()`: Convert categorical to numeric data
+
+### Data Visualization
+- `plot_numeric_distributions()`: Visualize numeric distributions
+- `plot_pie_charts()`: Create pie charts
+- `plot_interactive_line_chart()`: Generate interactive line charts
+- `plot_interactive_pie_chart()`: Create interactive pie charts
+
+### Machine Learning
+- `linear_regression()`: Perform linear regression
+- `calculate_metrics()`: Calculate model performance metrics
+- `unSupervisedCluster()`: Perform clustering analysis
+- `gradient_boosting_regression()`: Apply gradient boosting
+- `xgboost_regression()`: Implement XGBoost regression
+- `random_forest_regression()`: Use random forest regression
+- `most_common_words()`: Analyze text data
+- `y_generator()`: Generate target variables
+
+## Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by data scientists for data scientists
