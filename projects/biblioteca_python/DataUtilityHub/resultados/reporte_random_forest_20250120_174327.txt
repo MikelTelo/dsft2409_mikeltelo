@@ -1,0 +1,32 @@
+=== Reporte de Evaluación: Random Forest ===
+Fecha y hora: 2025-01-20 17:43:27
+
+1. Información del Modelo
+--------------------------------------------------
+Parámetros del modelo:
+- bootstrap: True
+- ccp_alpha: 0.0
+- criterion: squared_error
+- max_depth: None
+- max_features: 1.0
+- max_leaf_nodes: None
+- max_samples: None
+- min_impurity_decrease: 0.0
+- min_samples_leaf: 1
+- min_samples_split: 2
+- min_weight_fraction_leaf: 0.0
+- monotonic_cst: None
+- n_estimators: 100
+- n_jobs: None
+- oob_score: False
+- random_state: 42
+- verbose: 0
+- warm_start: False
+
+2. Métricas de Rendimiento
+--------------------------------------------------
+MSE (Train): 3866050.0000
+MSE (Test): 8929700.0000
+RMSE: 2988.2604
+MAE: 2890.0000
+R²: 0.9107
